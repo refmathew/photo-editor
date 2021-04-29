@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const { src, dest, watch, series } = require("gulp");
 // const jade = require("gulp-jade");
-const sass = require("gulp-sass");
+const sass = require("gulp-dart-sass");
 // const autoprefixer = require("gulp-autoprefixer");
 // const cssnano = require("cssnano");
 const terser = require("gulp-terser");
@@ -14,7 +14,7 @@ function sassTask() {
   return (
     src("src/sass**/*.sass", { sourcemaps: true })
       // pass into sass compiler
-      .pipe(sass())
+      .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
       // minify css
       // .pipe(postcss([cssnano()]))
       // where to save

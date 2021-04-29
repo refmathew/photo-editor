@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["sass/style.sass","sass/_no.sass"],"names":[],"mappings":"AAEA,EACE,uBACA,eACA,MCLK,KDOP,IACE,sBACA","file":"sass/style.css","sourcesContent":["@use 'no'\n\n*\n  background-color: green\n  font-size: 10px\n  color: no.$blue\n\nimg\n  border: 10px solid red\n  filter: blur(2px)\n","$blue: white "]}
